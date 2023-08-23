@@ -1,0 +1,495 @@
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type=radio] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1276px;
+  width: 93.4%;
+  margin: 0 auto;
+}
+
+.sub-heading, .main-heading {
+  font-weight: 600;
+}
+
+.main-heading {
+  color: #6069D0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  color: #6069D0;
+  font-size: 26px;
+}
+
+.info {
+  color: #717171;
+  line-height: 1.5;
+}
+
+/*media query for hover from 480px starts here*/
+@media only screen and (max-width: 480px) {
+  .main-heading {
+    font-size: 16px;
+  }
+  .sub-heading {
+    font-size: 22px;
+  }
+  .info {
+    font-size: 14px;
+  }
+}
+.sub-heading, .main-heading {
+  font-weight: 600;
+}
+
+.main-heading {
+  color: #6069D0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  color: #6069D0;
+  font-size: 26px;
+}
+
+.info {
+  color: #717171;
+  line-height: 1.5;
+}
+
+/*media query for hover from 480px starts here*/
+@media only screen and (max-width: 480px) {
+  .main-heading {
+    font-size: 16px;
+  }
+  .sub-heading {
+    font-size: 22px;
+  }
+  .info {
+    font-size: 14px;
+  }
+}
+.header {
+  padding: 25px 0;
+  border-bottom: 2px solid #C0C0C0;
+}
+
+.main-heading {
+  display: flex;
+  align-items: center;
+}
+.main-heading > img {
+  width: auto;
+  margin-right: 10px;
+}
+
+.job-section {
+  border-bottom: 2px solid #C0C0C0;
+  /*media query starts*/
+  /*media query for hover from 995px starts here*/
+  /*media query for hover from 768px starts here*/
+  /*media query for hover from 480px starts here*/
+}
+.job-section .job-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.job-section .job-container .job-left {
+  padding: 55px 0;
+  flex: 0 0 65%;
+}
+.job-section .job-container .job-left .job-location {
+  margin-top: 20px;
+  display: inline-block;
+  color: #6069D0;
+  font-size: 20px;
+}
+.job-section .job-container .job-left .job-title {
+  margin-top: 40px;
+  color: #6069D0;
+  font-size: 20px;
+}
+.job-section .job-container .job-left .info {
+  margin-top: 30px;
+}
+.job-section .job-container .job-left .info .see-link {
+  color: #44C79D;
+}
+.job-section .job-container .job-left .job-btns {
+  margin-top: 40px;
+  display: flex;
+}
+.job-section .job-container .job-left .apply-btn, .job-section .job-container .job-left .connect-btn {
+  padding: 20px 1%;
+  border-radius: 5px;
+  margin-right: 2.5%;
+  background-color: #44C79D;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.job-section .job-container .job-left .connect-btn {
+  margin: 0;
+}
+.job-section .job-container .job-right {
+  flex: 0 0 30%;
+}
+.job-section .job-container .job-right > img {
+  width: auto;
+}
+@media only screen and (min-width: 995px) {
+  .job-section .apply-btn:hover, .job-section .job-container .job-left .connect-btn:hover,
+  .job-section .connect-btn:hover {
+    background-color: #C0C0C0;
+    color: #44C79D;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .job-section .job-container > .job-left,
+  .job-section .job-container > .job-right {
+    flex: 0 0 100%;
+  }
+  .job-section .job-container > .job-left > .job-btns {
+    flex-direction: column;
+  }
+  .job-section .job-left > .job-btns > .apply-btn, .job-section .job-container .job-left > .job-btns > .connect-btn {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .job-section .job-container > .job-right > img {
+    width: 100%;
+  }
+}
+
+.insiders-section {
+  padding: 55px 0;
+  border-bottom: 2px solid #C0C0C0;
+  /*media query for hover from 768px starts here*/
+  /*media query for hover from 560px starts here*/
+  /*media query for hover from 480px starts here*/
+}
+.insiders-section .profiles {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.insiders-section .profiles > li {
+  flex: 0 0 20%;
+  text-align: center;
+}
+.insiders-section .profiles > li img {
+  width: auto;
+}
+.insiders-section .profiles > li .profile-name {
+  margin-top: 20px;
+  display: block;
+  color: #44C79D;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.insiders-section .profiles > li .profile-position {
+  margin-top: 20px;
+  color: #717171;
+  font-weight: 600;
+}
+.insiders-section .profiles > li .rating {
+  margin-top: 22px;
+}
+.insiders-section .profiles > li .rating > span {
+  font-size: 0;
+}
+.insiders-section .profiles > li .rating > span::before {
+  color: #6069D0;
+  font-family: "FontAwesome";
+  font-size: 20px;
+}
+.insiders-section .profiles > li .rating .star::before {
+  content: "\f005";
+}
+.insiders-section .profiles > li .rating .star:last-child::before {
+  content: "\f5c0";
+}
+.insiders-section .profiles > li .profile-info {
+  margin-top: 22px;
+  color: #717171;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .insiders-section .profiles > li {
+    margin-bottom: 40px;
+    flex: 0 0 45%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .insiders-section .profiles > li {
+    flex: 0 0 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .insiders-section .profiles > li > .profile-name {
+    font-size: 18px;
+  }
+}
+
+.work-section {
+  padding: 55px 0;
+  border-bottom: 2px solid #C0C0C0;
+  /*media query for hover from 768px starts here*/
+  /*media query for hover from 560px starts here*/
+}
+.work-section .work-list {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.work-section .work-list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 25%;
+}
+.work-section .work-list > li > span {
+  font-size: 0;
+}
+.work-section .work-list > li > span::before {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6069D0;
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 50px;
+}
+.work-section .work-list > li .search::before {
+  content: "\f002";
+}
+.work-section .work-list > li .calendar::before {
+  content: "\f073";
+}
+.work-section .work-list > li .chat::before {
+  content: "\f086";
+}
+.work-section .work-list > li .work-heading {
+  margin-top: 35px;
+  color: #717171;
+  font-size: 20px;
+  font-weight: 600;
+}
+.work-section .work-list > li .info {
+  margin-top: 32px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .work-section .work-list > li {
+    margin-bottom: 40px;
+    flex: 0 0 48%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .work-section .work-list > li {
+    flex: 0 0 100%;
+  }
+}
+
+.testimonal-section {
+  padding: 55px 0;
+  border-bottom: 2px solid #C0C0C0;
+  background-color: #6069D0;
+  /*media query for hover from 560px starts here*/
+}
+.testimonal-section .sub-heading, .testimonal-section .info {
+  color: #fff;
+}
+.testimonal-section .slider {
+  margin-top: 50px;
+  position: relative;
+}
+.testimonal-section .info {
+  padding: 0 10%;
+  text-align: center;
+}
+.testimonal-section .arrows > a {
+  font-size: 0;
+}
+.testimonal-section .arrows > a::before {
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 50px;
+}
+.testimonal-section .arrows > a:hover::before {
+  color: #C0C0C0;
+}
+.testimonal-section .arrows .slide-left {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+.testimonal-section .arrows .slide-left::before {
+  content: "\f053";
+}
+.testimonal-section .arrows .slide-right {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.testimonal-section .arrows .slide-right::before {
+  content: "\f054";
+}
+.testimonal-section .radios {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.testimonal-section .radios > li {
+  margin-right: 10px;
+}
+.testimonal-section .radios > li > a {
+  font-size: 0;
+}
+.testimonal-section .radios > li > a::before {
+  font-family: "FontAwesome";
+  color: #C0C0C0;
+  font-size: 20px;
+}
+.testimonal-section .radios > li > a:hover::before {
+  color: #fff;
+}
+.testimonal-section .radios > li .radio::before {
+  content: "\f111";
+}
+.testimonal-section .radios > li .active-radio::before {
+  color: #fff;
+}
+.testimonal-section .radios > li:last-child {
+  margin: 0;
+}
+@media only screen and (max-width: 560px) {
+  .testimonal-section .arrows > .slide-left,
+  .testimonal-section .arrows > .slide-right {
+    top: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

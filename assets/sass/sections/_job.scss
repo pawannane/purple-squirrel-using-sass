@@ -1,0 +1,99 @@
+@import "./../common/colors";
+
+.job-section {
+  border-bottom: 2px solid $silver;
+
+  .job-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .job-left {
+      padding: 55px 0;
+      flex: 0 0 65%;
+
+      .job-location {
+        margin-top: 20px;
+        display: inline-block;
+        color: $purple;
+        font-size: 20px;
+      }
+
+      .job-title {
+        margin-top: 40px;
+        color: $purple;
+        font-size: 20px;
+      }
+
+      .info {
+        margin-top: 30px;
+        .see-link {
+          color: $green;
+        }
+      }
+
+      .job-btns {
+        margin-top: 40px;
+        display: flex;
+      }
+
+      .apply-btn {
+        padding: 20px 1%;
+        border-radius: 5px;
+        margin-right: 2.5%;
+        background-color: $green;
+        color: $white;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .connect-btn {
+        @extend .apply-btn;
+        margin: 0;
+      }
+    }
+
+    .job-right {
+      flex: 0 0 30%;
+      > img {
+        width: auto;
+      }
+    }
+  }
+
+  /*media query starts*/
+  /*media query for hover from 995px starts here*/
+  @media only screen and (min-width: 995px) {
+    .apply-btn,
+    .connect-btn {
+      &:hover {
+        background-color: $silver;
+        color: $green;
+      }
+    }
+  }
+
+  /*media query for hover from 768px starts here*/
+  @media only screen and (max-width: 768px) {
+    .job-container > .job-left,
+    .job-container > .job-right {
+      flex: 0 0 100%;
+    }
+
+    .job-container > .job-left > .job-btns {
+      flex-direction: column;
+    }
+
+    .job-left > .job-btns > .apply-btn {
+      margin: 0 0 20px 0;
+      font-size: 16px;
+    }
+  }
+
+  /*media query for hover from 480px starts here*/
+  @media only screen and (max-width: 480px) {
+    .job-container > .job-right > img { width: 100%; }
+  }
+}

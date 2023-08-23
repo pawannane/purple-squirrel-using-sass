@@ -1,0 +1,18 @@
+@import "./../common/colors";
+@import "./../common/mixins";
+
+.header { 
+  padding: 25px 0;
+  border-bottom: 2px solid $silver;
+}
+
+.main-heading {
+  display: flex;
+  align-items: center;
+
+  >img {
+    width: auto;
+    margin-right: 10px;
+  }
+
+}

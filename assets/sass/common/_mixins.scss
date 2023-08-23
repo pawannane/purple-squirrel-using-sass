@@ -1,0 +1,28 @@
+@import "./colors";
+
+%fontWeight { font-weight: 600; }
+
+.main-heading {
+  color: $purple;
+  font-size: 20px;
+  @extend %fontWeight;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  color: $purple;
+  font-size: 26px;
+  @extend %fontWeight;
+}
+
+.info {
+  color: $darkSilver;
+  line-height: 1.5;
+}
+
+/*media query for hover from 480px starts here*/
+@media only screen and (max-width: 480px) {
+  .main-heading { font-size: 16px; }
+  .sub-heading { font-size: 22px; }
+  .info { font-size: 14px; }
+}

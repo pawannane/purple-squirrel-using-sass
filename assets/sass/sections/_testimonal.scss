@@ -1,0 +1,99 @@
+@import "./../common/colors";
+
+.testimonal-section {
+  padding: 55px 0;
+  border-bottom: 2px solid $silver;
+  background-color: $purple;
+
+  .sub-heading {
+    color: $white;
+  }
+
+  .slider {
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .info {
+    padding: 0 10%;
+    @extend .sub-heading;
+    text-align: center;
+  }
+
+  .arrows {
+    > a {
+      font-size: 0;
+
+      &::before {
+        font-family: "FontAwesome";
+        color: $white;
+        font-size: 50px;
+      }
+
+      &:hover::before {
+        color: $silver;
+      }
+    }
+
+    .slide-left {
+      position: absolute;
+      top: 5px;
+      left: 0;
+
+      &::before {
+        content: "\f053";
+      }
+    }
+
+    .slide-right {
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      &::before {
+        content: "\f054";
+      }
+    }
+  }
+
+  .radios {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+
+    > li {
+      margin-right: 10px;
+
+      > a {
+        font-size: 0;
+
+        &::before {
+          font-family: "FontAwesome";
+          color: $silver;
+          font-size: 20px;
+        }
+        &:hover::before {
+          color: $white;
+        }
+      }
+
+      .radio::before {
+        content: "\f111";
+      }
+      .active-radio::before {
+        color: $white;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  /*media query for hover from 560px starts here*/
+  @media only screen and (max-width: 560px) {
+    .arrows > .slide-left,
+    .arrows > .slide-right {
+      top: 30px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "./../common/colors";
+
+.work-section {
+  padding: 55px 0;
+  border-bottom: 2px solid $silver;
+
+  .work-list {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 25%;
+
+      > span {
+        font-size: 0;
+        
+        &::before {
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $purple;
+          color: $white;
+          font-family: "FontAwesome";
+          font-size: 50px;
+        }
+      }
+
+      .search::before { content: "\f002"; }
+      .calendar::before { content: "\f073"; }
+      .chat::before { content: "\f086"; }
+
+      .work-heading {
+        margin-top: 35px;
+        color: $darkSilver;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .info { 
+        margin-top: 32px; 
+        text-align: center;
+      }
+    }
+  }
+
+  /*media query for hover from 768px starts here*/
+  @media only screen and (max-width: 768px) {
+    .work-list {
+      >li { 
+        margin-bottom: 40px;
+        flex: 0 0 48%;
+       }
+    }
+  }
+
+  /*media query for hover from 560px starts here*/
+  @media only screen and (max-width: 560px) {
+    .work-list {
+      >li { flex: 0 0 100%; }
+       }
+    }
+  }
+

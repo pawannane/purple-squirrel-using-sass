@@ -1,0 +1,88 @@
+@import "./../common/colors";
+
+.insiders-section {
+  padding: 55px 0;
+  border-bottom: 2px solid $silver;
+
+  .profiles {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > li {
+      flex: 0 0 20%;
+      text-align: center;
+
+      img {
+        width: auto;
+      }
+
+      .profile-name {
+        margin-top: 20px;
+        display: block;
+        color: $green;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .profile-position {
+        margin-top: 20px;
+        color: $darkSilver;
+        font-weight: 600;
+      }
+
+      .rating {
+        margin-top: 22px;
+
+        > span {
+          font-size: 0;
+
+          &::before {
+            color: $purple;
+            font-family: "FontAwesome";
+            font-size: 20px;
+          }
+        }
+
+        .star {
+          &::before {
+            content: "\f005";
+          }
+          &:last-child::before {
+            content: "\f5c0";
+          }
+        }
+      }
+
+      .profile-info {
+        margin-top: 22px;
+        color: $darkSilver;
+        font-size: 14px;
+      }
+    }
+  }
+
+  /*media query for hover from 768px starts here*/
+  @media only screen and (max-width: 768px) {
+    .profiles {
+      > li {
+        margin-bottom: 40px;
+        flex: 0 0 45%;
+      }
+    }
+  }
+
+  /*media query for hover from 560px starts here*/
+  @media only screen and (max-width: 560px) {
+    .profiles {
+      > li { flex: 0 0 100%; }
+    }
+  }
+
+  /*media query for hover from 480px starts here*/
+  @media only screen and (max-width: 480px) {
+    .profiles > li > .profile-name { font-size: 18px; }
+  }
+}
